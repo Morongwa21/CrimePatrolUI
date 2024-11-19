@@ -1,0 +1,71 @@
+/* General page styling */
+.landing-container {
+    font-family: Arial, sans-serif;
+    position: relative; /* For absolute positioning of background animation */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.badge-image {
+    width: 200px; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+/* Welcome text styling with animation */
+.welcome-text {
+    font-size: 24px;
+    color: #003d66; /* SAPS Blue */
+    animation: fadeIn 3s ease-in; /* Fade-in animation */
+}
+
+/* Background animation styling */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+    #ceced0;
+    animation: backgroundMove 5s linear infinite; /* Background animation */
+    z-index: -1; /* Send to the back */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Loading bar styles */
+.loading-bar {
+    width: 100%;
+    background-color: #ddd; /* Light gray background for the loading bar */
+    border-radius: 4px;
+    height: 10px; /* Height of the loading bar */
+    margin-top: 20px; /* Space above the loading bar */
+}
+
+.loading-fill {
+    background-color: #003d66; /* Change this to the color you want for the fill */
+    height: 100%; /* Full height of the loading bar */
+    border-radius: 4px;
+    transition: width 0.1s; /* Smooth transition for the loading effect */
+}
+
+/* Keyframes for welcome text animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
